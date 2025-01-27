@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden if the bug occurs.
+  </div>
+  <script>
+    //Bug: Incorrect use of querySelectorAll with a tag name that's also an attribute name
+    const elements = document.querySelectorAll('class');
+    console.log(elements); // This will not select any elements correctly, it selects elements which have class attribute
+    for (const element of elements) {
+      element.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
