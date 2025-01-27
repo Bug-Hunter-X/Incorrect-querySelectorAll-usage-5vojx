@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be visible.
+  </div>
+  <script>
+    //Solution: Correctly select elements using querySelectorAll 
+    const elements = document.querySelectorAll('#myDiv'); // Selecting element by ID is correct
+    console.log(elements); // Correctly selects the element
+  </script>
+</body>
+</html>
